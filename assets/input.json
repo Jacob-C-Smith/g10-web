@@ -1,0 +1,151 @@
+{
+    "name" : "G10 default input configuration",
+    "mouse sensitivity" : 7.0,
+    "binds" :
+    [
+        {
+            "name" : "FORWARD",
+            "keys" :
+            [
+                "W"
+            ]
+        },
+        {
+            "name" : "BACKWARD",
+            "keys" :
+            [
+                "S"
+            ]
+        },
+        {
+            "name" : "STRAFE LEFT",
+            "keys" :
+            [
+                "A"
+            ]
+        },
+        {
+            "name" : "STRAFE RIGHT",
+            "keys" :
+            [
+                "D"
+            ]
+        },
+        {
+            "name" : "HELP",
+            "keys" :
+            [
+                "F1"
+            ]
+        },
+        {
+            "name" : "JUMP",
+            "keys" :
+            [
+                "SPACE"
+            ]
+        },
+        {
+            "name" : "DUCK",
+            "keys" :
+            [
+                "C"
+            ]
+        },
+        {
+            "name" : "PRONE",
+            "keys" :
+            [
+                "LEFT CONTROL"
+            ]
+        },
+        {
+            "name" : "VOICE TRANSMIT",
+            "keys" :
+            [
+                "F"
+            ]
+        },
+        {
+            "name" : "TEXT CHAT",
+            "keys" :
+            [
+                "Y"
+            ]
+        },
+        {
+            "name" : "A ATTACK",
+            "keys" :
+            [
+                "MOUSE 1"
+            ]
+        },
+        {
+            "name" : "B ATTACK",
+            "keys" :
+            [
+                "MOUSE 2"
+            ]
+        },
+        {
+            "name" : "MOUSE",
+            "keys" :
+            [
+                "MOUSE UP",
+                "MOUSE DOWN",
+                "MOUSE LEFT",
+                "MOUSE RIGHT"
+            ]
+        },
+        {
+            "name" : "RELOAD",
+            "keys" :
+            [
+                "R"
+            ]
+        },
+        {
+            "name" : "QUIT",
+            "keys" :
+            [
+                "ESCAPE"
+            ]
+        },
+        {
+            "name" : "CAMERA UP",
+            "keys" :
+            [
+                "KEYPAD 8"
+            ]
+        },
+        {
+            "name" : "CAMERA DOWN",
+            "keys" :
+            [
+                "KEYPAD 2"
+            ]
+        },
+        {
+            "name" : "TOGGLE LOCK MOUSE",
+            "keys" :
+            [
+                "TAB"
+            ]
+        },
+        {
+            "name" : "PLAY SOUND",
+            "keys" :
+            [
+                "G"
+            ]
+        },
+        {
+            "name" : "TOGGLE FULLSCREEN",
+            "keys" :
+            [
+                "F11",
+                "F5"
+            ]
+        }
+    ]
+}

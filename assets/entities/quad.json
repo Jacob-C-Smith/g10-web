@@ -1,0 +1,13 @@
+{
+    "$schema" : "https://schema.g10.app/entity.json",
+    "name" : "quad",
+    "parts" : [ "assets/parts/quad.json" ],
+    "shader" : "assets/shaders/ubshader.json",
+    "transform" : 
+    {
+        "$schema"  : "https://schema.g10.app/transform.json",
+        "location" : [ 0.0, 0.0, 0.0 ],
+        "rotation" : [ 0.0, 0.0, 0.0 ],
+        "scale"    : [ 1.0, 1.0, 1.0 ]
+    }
+}

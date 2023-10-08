@@ -1,0 +1,31 @@
+{
+    "$schema" : "https://schema.g10.app/entity.json",
+    "name" : "cube",
+    "parts" : [ "assets/parts/cube.json" ],
+    "shader" : "assets/shaders/shader.json",
+    "materials": [
+        "assets/materials/material.json"
+    ],
+    "transform" : 
+    {
+        "$schema"  : "https://schema.g10.app/transform.json",
+        "location" : [ 0.0, 0.0, 0.0 ],
+        "rotation" : [ 0.0, 0.0, 0.0 ],
+        "scale"    : [ 1.0, 1.0, 1.0 ]
+    },
+    "rigidbody" :
+    {
+        "$schema"  : "https://schema.g10.app/rigidbody.json",
+        "active"   : true,
+        "friction" : 0.5,
+        "bounce"   : 0.0,
+        "mass"     : 1.0
+    },
+    "collider" :
+    {
+        "$schema": "https://schema.g10.app/collider.json",
+        "type": "box",
+        "max": [ 1.0, 1.0, 1.0 ],
+        "min": [ -1.0, -1.0, -1.0 ]
+    }
+}

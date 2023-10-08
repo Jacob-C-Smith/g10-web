@@ -1,0 +1,132 @@
+{
+    "name" : "wireframe",
+    "type" : "graphics",
+    "vertex shader path" : "ubvert.spv",
+    "vertex shader source path" : "ubvert.glsl",
+    "fragment shader path" : "ubfrag.spv",
+    "fragment shader source path" : "ubfrag.glsl",
+    "webgpu" :
+    {
+        "vertex" : 
+        {
+            "path" : "assets/shaders/ubvert.wgsl",
+            "entry" : "vertex_main"
+        },
+        "fragment" : 
+        {
+            "path" : "assets/shaders/ubfrag.wgsl",
+            "entry" : "fragment_main"
+        }
+    },
+    "in" :
+    {
+        "vertex attributes" :
+        [
+            {
+                "name"     : "xyz",
+                "location" : 0,
+                "type"     : "vec3"
+            },
+            {
+                "name"     : "uv",
+                "location" : 1,
+                "type"     : "vec2"
+            },
+            {
+                "name"     : "nxyz",
+                "location" : 2,
+                "type"     : "vec3"
+            }
+        ],
+        "topology" : "triangle"
+    },
+    "rasterizer" :
+    {
+        "depth clamp enable" : false,
+        "rasterizer discard enable" : false,
+        "polygon mode" : "line",
+        "cull mode" :
+        [
+            "front"
+        ],
+        "clockwise" : false,
+        "depth bias enable" : false,
+        "depth bias constant factor" : 0.0,
+        "depth bias clamp" : 0.0,
+        "depth bias slope factor" : 0.0,
+        "line width" : 1.0
+    },
+    "layout" :
+    {
+        "sets" :
+        [
+            {
+                "name" : "camera",
+                "descriptors" :
+                [
+                    {
+                        "name" : "camera data",
+                        "type" : "uniform buffer",
+                        "struct" :
+                        [
+                            {
+                                "name" : "M",
+                                "type" : "mat4"
+                            },
+                            {
+                                "name" : "V",
+                                "type" : "mat4"
+                            }
+                        ]
+                    },
+                    {
+                        "name" : "camera data 2",
+                        "type" : "uniform buffer",
+                        "struct" :
+                        [
+                            {
+                                "name" : "P",
+                                "type" : "mat4"
+                            },
+                            {
+                                "name" : "camera position",
+                                "type" : "vec3"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },    
+    "attachments" :
+    [
+        {
+            "name" : "final",
+            "blend enable" : true,
+            "source color blend factor" : "source alpha",
+            "destination color blend factor" : "one minus source alpha",
+            "color blend operation" : "add",
+            "source alpha blend factor" : "one",
+            "destination alpha blend factor" : "zero",
+            "alpha blend operation" : "add"
+        },
+        {
+            "name" : "depth",
+            "blend enable" : true,
+            "source color blend factor" : "source alpha",
+            "destination color blend factor" : "one minus source alpha",
+            "color blend operation" : "add",
+            "source alpha blend factor" : "one",
+            "destination alpha blend factor" : "zero",
+            "alpha blend operation" : "add"
+        }
+    ],
+    "multisampler" :
+    {
+        "samples" : 1,
+        "sample shading enable" : false,
+        "minimum sample shading" : 0.0,
+        "alpha to coverage enable" : false,
+        "alpha to one enable" : false
+    }
+}

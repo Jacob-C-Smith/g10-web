@@ -1,0 +1,13 @@
+{
+    "$schema" : "https://schema.g10.app/entity.json",
+    "name" : "tri",
+    "parts" : [ "assets/parts/tri.json" ],
+    "shader" : "assets/shaders/ubshader.json",
+    "transform" : 
+    {
+        "$schema"  : "https://schema.g10.app/transform.json",
+        "location" : [ 0.7, 0.6, 0.0 ],
+        "rotation" : [ 0.0, 0.0, 0.0 ],
+        "scale"    : [ 0.5, 1.0, 1.0 ]
+    }
+}

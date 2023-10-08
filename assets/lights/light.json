@@ -1,0 +1,6 @@
+{
+    "$schema"  : "https://schema.g10.app/light.json",
+    "name"     : "light",
+    "location" : [ 4.08, 1.01, 5.91 ],
+    "color"    : [ 1000.0, 1000.0, 1000.0 ]
+}

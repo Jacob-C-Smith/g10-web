@@ -1,0 +1,87 @@
+{
+    "$schema" : "https://schema.g10.app/instance.json",
+    "name" : "G10 Client Debug Instance",
+    "renderer" : "assets/renderers/renderer.json",
+    "input" : "assets/input.json",
+    "schedules" :
+    [
+        "G10/schedules/client schedule.json"
+    ],
+    "initial scene" : "assets/scenes/scene.json",
+    "window" :
+    { 
+        "width"  : 1280,
+        "height" : 720, 
+        "title"  : "G10 Web"
+    },
+    "cache" :
+    { 
+        "part count"     : 128,
+        "material count" : 128,
+        "shader count"   : 32,
+        "ai count"       : 16
+    },
+    "splash screen" :
+    {
+        "front" : "G10/splash.png",
+        "back" : "G10/splash_back.png"
+    },
+    "network bandwidth" : 64,
+    "loading thread count" : 1,
+    "vulkan" :
+    {
+        "device" :
+        {
+            "name" : "NVIDIA GeForce RTX 2060",
+            "extensions" :
+            [
+                "VK_KHR_swapchain",
+                "VK_EXT_descriptor_buffer",
+                "VK_KHR_portability_subset",
+                "VK_EXT_memory_priority",
+                "VK_EXT_mesh_shader",
+                "VK_EXT_robustness2",
+                "VK_EXT_descriptor_indexing",
+                "VK_KHR_buffer_device_address",
+                "VK_EXT_pageable_device_local_memory",
+                "VK_KHR_fragment_shading_rate",
+                "VK_KHR_maintenance4"
+            ],
+            "features" : 
+            [
+                "geometry shader",
+                "tessellation shader"
+            ],
+            "queue counts" : {
+                "graphics" : 3,
+                "compute"  : 1,
+                "transfer" : 1
+            }
+        },
+        "instance" : 
+        {
+            "extensions" : 
+            [
+                "VK_KHR_surface", 
+                "VK_KHR_win32_surface", 
+                "VK_EXT_debug_utils"
+            ],
+            "validation layers" : 
+            [
+                "VK_LAYER_KHRONOS_validation",
+                "VK_LAYER_KHRONOS_synchronization2",
+                "VK_LAYER_KHRONOS_profiles"
+            ],
+            "application" :
+            {
+                "name" : "Tanks",
+                "version" : [ 9, 9, 9 ]
+            }            
+        },
+        "swap chain" : {
+            "present mode" : "mailbox",
+            "format" : "unorm b8g8r8a8"
+        },
+        "max buffered frames" : 2
+    }
+}

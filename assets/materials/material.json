@@ -1,0 +1,31 @@
+{
+    "$schema": "https://schema.g10.app/material.json",
+    "name": "material",
+    "textures": [
+        {
+            "$schema": "https://schema.g10.app/texture-schema.json",
+            "name": "albedo",
+            "path": "assets/textures/albedo.png"
+        },
+        {
+            "$schema": "https://schema.g10.app/texture-schema.json",
+            "name": "normal",
+            "path": "assets/textures/normal.png"
+        },
+        {
+            "$schema": "https://schema.g10.app/texture-schema.json",
+            "name": "rough",
+            "path": "assets/textures/rough.png"
+        },
+        {
+            "$schema": "https://schema.g10.app/texture-schema.json",
+            "name": "metal",
+            "path": "assets/textures/metal.png"
+        },
+        {
+            "$schema": "https://schema.g10.app/texture-schema.json",
+            "name": "ao",
+            "path": "assets/textures/ao.png"
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+{
+    "$schema": "https://schema.g10.app/scene.json",
+    "name": "scene",
+    "entities":
+    [
+        "assets/entities/tri.json",
+        "assets/entities/cube.json",
+        "assets/entities/quad.json"
+    ],
+    "cameras" :
+    [
+        {
+            "$schema"  : "https://schema.g10.app/camera.json",
+            "name"     : "camera",
+            "fov"      : 50.0,
+            "near"     : 0.1,
+            "far"      : 100.0,
+            "front"    : [ -0.65, 0.61, -0.45 ],
+            "up"       : [ -0.32, 0.31, 0.90 ],
+            "location" : [ 7.36, -6.93, 4.96 ]
+        }
+    ],
+    "lights" :
+    [
+        "assets/lights/light.json"
+    ],
+    "audio sources" :
+    [
+        {
+            "$schema" : "https://schema.g10.app/sound.json",
+            "name": "explosion",
+            "path": "assets/audio/explosion.flac"
+        }
+    ],
+    "skybox": "assets/skyboxes/skybox.json"
+}

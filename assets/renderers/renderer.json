@@ -1,0 +1,87 @@
+{
+    "name" : "Minimum renderer",
+    "attachments" :
+    [
+        {
+            "name"            : "final",
+            "description"     : "final rendering result",
+            "samples"         : 1,
+            "format"          : "sRGB b8g8r8a8",
+            "load operation"  : "clear",
+            "store operation" : "store",
+            "initial layout"  : "color attachment",
+            "final layout"    : "present source"
+        },
+        {
+            "name"            : "depth",
+            "description"     : "depth buffer",
+            "samples"         : 1,
+            "format"          : "unorm d24 uint s8",
+            "load operation"  : "clear",
+            "store operation" : "don't care",
+            "initial layout"  : "depth stencil attachment",
+            "final layout"    : "depth stencil attachment"
+        }
+    ],
+    "passes" :
+    [
+        {
+            "name" : "forward pass",
+            "attachments" : [
+                "final",
+                "depth"
+            ],
+            "subpasses" : [
+                {
+                    "name" : "geometry and depth",
+                    "pipeline" : "compute",
+                    "shaders" :
+                    [
+                        "G10/shaders/graphics/wireframe.json"
+                    ],
+                    "color attachments" :
+                    [
+                        "final"
+                    ],
+                    "depth attachment" : "depth"
+                }
+            ],
+            "dependencies" : [
+                {
+                    "flags" : "by region",
+                    "source subpass" : "",
+                    "destination subpass" : "final",
+                    "source stage" : [
+                        "color attachment output",
+                        "early fragment tests"
+                    ],
+                    "destination stage" : 
+                    [
+                        "color attachment output",
+                        "early fragment tests"
+                    ],
+                    "destination access" :
+                    [
+                        "color attachment write",
+                        "depth stencil attachment write"
+                    ]
+                }
+            ],
+            "shader" : "assets/shaders/ubshader.json"
+        }
+    ],
+    "synchronization" :
+    {
+        "fences" :
+        {
+            "IN FLIGHT" : true
+        },
+        "binary semaphores" :
+        [
+            "RENDER FINISHED",
+            "IMAGE AVAILABLE",
+            "TERNARY SEMAPHORE"
+        ]
+    },
+    "clear color" : [ 0.5, 0.5, 1.0, 1.0 ]
+}

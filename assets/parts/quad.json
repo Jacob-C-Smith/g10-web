@@ -1,0 +1,5 @@
+{
+    "$schema" : "https://schema.g10.app/part.json",
+    "name" : "quad",
+    "polygon" : "assets/parts/quad.ply.json"
+}
