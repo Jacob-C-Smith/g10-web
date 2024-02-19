@@ -3,7 +3,7 @@ class camera
 {
 
     // Private class members
-    #_name       = null;
+    #_name      = null;
     #fov        = null;
     #near       = null;
     #far        = null;
@@ -19,7 +19,7 @@ class camera
         return ( async () => {
             if ( typeof value != "object" ) { throw new Error("[G10] [Camera] Camera constructor must be parameterized with an object matching the camera schema:\n https://schema.g10.app/camera.json") }
 
-            this.#_name     = ( value["name"] )
+            this.#_name    = ( value["name"] )
             this.#fov      = ( value["fov"] )
             this.#near     = ( value["near"] )
             this.#far      = ( value["far"] )

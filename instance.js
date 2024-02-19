@@ -1,5 +1,7 @@
 /**
- * @file Defines a G10 instance
+ * Defines a G10 instance
+ * 
+ * @file instance.js 
  * @author Jacob Smith
  */
 
